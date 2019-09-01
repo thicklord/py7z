@@ -1,0 +1,74 @@
+[
+    {
+        "INITIAL_SIZE": "1.2G",
+        "ORIGINAL_PATH": "/Users/chris/Desktop/tst_7z",
+        "DESTINATION_PATH": "/Users/chris/Desktop/tst_7z.7z",
+        "COMPRESSION_DETAILS": "{'compression_level': 9, 'compression_mode': 'S', 'remove_boolean': False, 'compression': True}",
+        "CONTAINING_FILE_TYPES": "['mp3', 'mp4', 'flac']",
+        "COMPRESSED_SIZE": null
+    },
+    {
+        "INITIAL_SIZE": "1.2G",
+        "ORIGINAL_PATH": "/Users/chris/Desktop/tst_7z",
+        "DESTINATION_PATH": "/Users/chris/Desktop/tst_7z.7z",
+        "COMPRESSION_DETAILS": "{'compression_level': 0, 'compression_mode': 'S', 'remove_boolean': False, 'compression': True}",
+        "CONTAINING_FILE_TYPES": "['mp3', 'mp4', 'flac']",
+        "COMPRESSED_SIZE": null
+    },
+    {
+        "INITIAL_SIZE": "293M",
+        "ORIGINAL_PATH": "/Users/chris/Desktop/tst_7z",
+        "DESTINATION_PATH": "/Users/chris/Desktop/tst_7z.7z",
+        "COMPRESSION_DETAILS": "{'compression_level': 0, 'compression_mode': 'S', 'remove_boolean': False, 'compression': True}",
+        "CONTAINING_FILE_TYPES": "['jar', 'eps', 'numbers', 'epub', 'zip', 'mp4', 'pages', 'xml', 'key', 'ai', 'pdf', 'sqlite']",
+        "COMPRESSED_SIZE": null
+    },
+    {
+        "INITIAL_SIZE": "293M",
+        "ORIGINAL_PATH": "/Users/chris/Desktop/tst_7z",
+        "DESTINATION_PATH": "/Users/chris/Desktop/tst_7z.7z",
+        "COMPRESSION_DETAILS": "{'compression_level': 0, 'compression_mode': 'S', 'remove_boolean': True, 'compression': True}",
+        "CONTAINING_FILE_TYPES": "['sqlite', 'mp4', 'pages', 'zip', 'epub', 'jar', 'ai', 'pdf', 'key', 'numbers', 'eps', 'xml']",
+        "COMPRESSED_SIZE": null
+    },
+    {
+        "INITIAL_SIZE": "43M",
+        "ORIGINAL_PATH": "/Users/chris/Desktop/tst_7z",
+        "DESTINATION_PATH": "/Users/chris/Desktop/tst_7z.7z",
+        "COMPRESSION_DETAILS": "{'compression_level': 0, 'compression_mode': 'R', 'remove_boolean': True, 'compression': True}",
+        "CONTAINING_FILE_TYPES": "['eps', 'pages', 'jar', 'sqlite', 'pdf', 'zip', 'xml', 'key', 'epub', 'ai', 'numbers']",
+        "COMPRESSED_SIZE": "7.9M"
+    },
+    {
+        "INITIAL_SIZE": "42M",
+        "ORIGINAL_PATH": "/Users/chris/Desktop/tst_7z",
+        "DESTINATION_PATH": "/Users/chris/Desktop/tst_7z.7z",
+        "COMPRESSION_DETAILS": "{'compression_level': 0, 'compression_mode': 'S', 'remove_boolean': True, 'compression': True}",
+        "CONTAINING_FILE_TYPES": "['ai', 'eps', 'pdf', 'xml', '7z', 'numbers', 'key', 'zip', 'jar', 'sqlite', 'epub', 'pages']",
+        "COMPRESSED_SIZE": null
+    },
+    {
+        "INITIAL_SIZE": "43M",
+        "ORIGINAL_PATH": "/Users/chris/Desktop/tst_7z",
+        "DESTINATION_PATH": "/Users/chris/Desktop/tst_7z.7z",
+        "COMPRESSION_DETAILS": "{'compression_level': 9, 'compression_mode': 'R', 'remove_boolean': True, 'compression': True}",
+        "CONTAINING_FILE_TYPES": "['epub', 'zip', 'jar', 'xml', 'key', 'sqlite', 'pages', 'numbers', 'eps', 'ai', 'pdf']",
+        "COMPRESSED_SIZE": "5.9M"
+    },
+    {
+        "INITIAL_SIZE": "2.5G",
+        "ORIGINAL_PATH": "/Users/chris/Desktop/4K Stogram",
+        "DESTINATION_PATH": "/Users/chris/Desktop/4K Stogram.7z",
+        "COMPRESSION_DETAILS": "{'compression_level': 9, 'compression_mode': 'R', 'remove_boolean': None, 'compression': True}",
+        "CONTAINING_FILE_TYPES": "['mp4', 'sqlite', 'jpg']",
+        "COMPRESSED_SIZE": "2.5G"
+    },
+    {
+        "INITIAL_SIZE": "2.5G",
+        "ORIGINAL_PATH": "/Users/chris/Desktop/4K Stogram",
+        "DESTINATION_PATH": "/Users/chris/Desktop/4K Stogram.7z",
+        "COMPRESSION_DETAILS": "{'compression_level': 9, 'compression_mode': 'S', 'remove_boolean': None, 'compression': True}",
+        "CONTAINING_FILE_TYPES": "['mp4', 'sqlite', 'jpg']",
+        "COMPRESSED_SIZE": "2.5G"
+    }
+]
