@@ -104,7 +104,15 @@ def prse():
 		# const='',
 		# nargs='?',
 		help="Compress root argument, sub-directories in the root level, or all directories recursively"
+	)
 	
+	compression_group.add_argument(
+		'-f',
+		'--other-flags',
+		dest="flags",
+		type=str,
+		default='',
+		help="Pass any other 7z flags"
 	)
 	
 	return parser.parse_args()

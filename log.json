@@ -86,5 +86,21 @@
         "COMPRESSION_DETAILS": "{'compression_level': 9, 'compression_mode': 'R', 'remove_boolean': True, 'compression': True}",
         "CONTAINING_FILE_TYPES": "['webm', 'gif', '7z', 'png', 'jpg', 'mp4']",
         "COMPRESSED_SIZE": null
+    },
+    {
+        "INITIAL_SIZE": "43M",
+        "ORIGINAL_PATH": "/Users/chris/Desktop/tst_7z",
+        "DESTINATION_PATH": "/Users/chris/Desktop/tst_7z.7z",
+        "COMPRESSION_DETAILS": "{'compression_level': 9, 'compression_mode': 'R', 'remove_boolean': True, 'compression': True}",
+        "CONTAINING_FILE_TYPES": "['sqlite', 'ai', 'pdf', 'zip', 'eps', 'pages', 'jar', 'epub', 'key', 'numbers', 'xml']",
+        "COMPRESSED_SIZE": null
+    },
+    {
+        "INITIAL_SIZE": "2.3M",
+        "ORIGINAL_PATH": "/Users/chris/Desktop/tst_7z",
+        "DESTINATION_PATH": "/Users/chris/Desktop/tst_7z.7z",
+        "COMPRESSION_DETAILS": "{'compression_level': 9, 'compression_mode': 'P', 'remove_boolean': True, 'compression': True}",
+        "CONTAINING_FILE_TYPES": "['jar', 'epub', 'eps', 'pdf', 'pages', 'key', 'ai', 'numbers', 'sqlite', 'xml', 'zip']",
+        "COMPRESSED_SIZE": "344K"
     }
 ]
