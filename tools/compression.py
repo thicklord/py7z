@@ -11,13 +11,7 @@ from tools.functions import *
 from tools.info import *
 
 
-def compressor(compression_path, compression_level, zargs):
-	
-	flags = None
-	
-	if zargs.flags or zargs.flags is not '':
-		flags = zargs.flags
-		print(flags)
+def compressor(compression_path, compression_level, zargs=None):
 	
 	try:
 		if not pid(compression_path):
@@ -30,8 +24,8 @@ def compressor(compression_path, compression_level, zargs):
 			os.system(
 				"""7z a -t7z -m0=lzma -mx=%d -mfb=64 -md=32m -ms=on "%s" "%s" """ % (compression_level, oj(save_dir, arc_name), compression_path))
 		
-		elif flags:
-			os.system("""7z a -t7z -m0=lzma -mx=%d -mfb=64 -md=32m -ms=on %s "%s.7z" "%s" """ % (compression_level, flags, compression_path, compression_path))
+		elif zargs:
+			os.system("""7z a -t7z -m0=lzma -mx=%d -mfb=64 -md=32m -ms=on %s "%s.7z" "%s" """ % (compression_level, zargs, compression_path, compression_path))
 		
 		else:
 			os.system("""7z a -t7z -m0=lzma -mx=%d -mfb=64 -md=32m -ms=on "%s.7z" "%s" """ % (compression_level, compression_path, compression_path))
@@ -44,7 +38,7 @@ def compressor(compression_path, compression_level, zargs):
 		return ''
 
 
-def recursor(r_path, lv, zargs):
+def recursor(r_path, lv):
 	if not pid(r_path):
 		return
 	
@@ -59,7 +53,7 @@ def recursor(r_path, lv, zargs):
 	directory_list = reversed(directory_list)
 	
 	for dr in directory_list:
-		compressor(dr, lv, zargs)
+		compressor(dr, lv)
 		send2trash(dr)
 
 
@@ -79,21 +73,21 @@ def squeezer(s_path, level, mode, argz):
 			
 			# only compress directories
 			if pid(sub_path):
-				compressor(sub_path, level, argz)
+				compressor(sub_path, level)
 			
 			# remove if the '-r' flag is passed
 			if argz.remove:
 				send2trash(sub_path)
 	
 	elif mode == 'R':
-		recursor(s_path, level, argz)
-		compressor(s_path, level, argz)
+		recursor(s_path, level)
+		compressor(s_path, level)
 		
 		if argz.remove:
 			send2trash(s_path)
 	
 	elif mode == 'P':
-		compressor(s_path, level, argz)
+		compressor(s_path, level)
 		if argz.remove:
 			send2trash(s_path)
 
