@@ -23,12 +23,12 @@ def prse():
 		dest='type',
 	)
 	
-	cparse = subpz.add_parser('C')
-	xparse = subpz.add_parser('X')
+	compression_group = subpz.add_parser('C')
+	extraction_group = subpz.add_parser('X')
 	
 	# # extraction parser and arguments
 	# flag to delete archives after extracting them
-	xparse.add_argument(
+	extraction_group.add_argument(
 		'-d',
 		'--delete-archives',
 		dest='remove',
@@ -36,7 +36,7 @@ def prse():
 		help='Triggers removal of archives after successful decompression'
 	)
 	# option to include other archive types other than 7z
-	xparse.add_argument(
+	extraction_group.add_argument(
 		'-i',
 		'--include-type',
 		dest='ext',
@@ -50,7 +50,7 @@ def prse():
 	
 	# # compression parser and arguments
 	# delete directories after compressed
-	cparse.add_argument(
+	compression_group.add_argument(
 		'-d',
 		'--delete-compressed',
 		dest='remove',
@@ -60,7 +60,7 @@ def prse():
 	)
 	
 	# compresssion level, between 0-9, default=0
-	cparse.add_argument(
+	compression_group.add_argument(
 		'level',
 		# '--compression-level',
 		type=int,
@@ -93,7 +93,7 @@ def prse():
 	# directories get compressed, the deepest leveled
 	# first, and then it works its way up to the top
 	# most level directory
-	cparse.add_argument(
+	compression_group.add_argument(
 		'-m',
 		'--compression-mode',
 		dest='mode',

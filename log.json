@@ -70,5 +70,21 @@
         "COMPRESSION_DETAILS": "{'compression_level': 9, 'compression_mode': 'S', 'remove_boolean': None, 'compression': True}",
         "CONTAINING_FILE_TYPES": "['mp4', 'sqlite', 'jpg']",
         "COMPRESSED_SIZE": "2.5G"
+    },
+    {
+        "INITIAL_SIZE": "43M",
+        "ORIGINAL_PATH": "/Users/chris/Desktop/tst_7z",
+        "DESTINATION_PATH": "/Users/chris/Desktop/tst_7z.7z",
+        "COMPRESSION_DETAILS": "{'compression_level': 9, 'compression_mode': 'R', 'remove_boolean': True, 'compression': True}",
+        "CONTAINING_FILE_TYPES": "['sqlite', 'pdf', 'ai', 'numbers', 'epub', 'key', 'zip', 'jar', 'eps', 'xml', 'pages']",
+        "COMPRESSED_SIZE": "5.9M"
+    },
+    {
+        "INITIAL_SIZE": "4.7G",
+        "ORIGINAL_PATH": "/Users/chris/Desktop/saved_media",
+        "DESTINATION_PATH": "/Users/chris/Desktop/saved_media.7z",
+        "COMPRESSION_DETAILS": "{'compression_level': 9, 'compression_mode': 'R', 'remove_boolean': True, 'compression': True}",
+        "CONTAINING_FILE_TYPES": "['webm', 'gif', '7z', 'png', 'jpg', 'mp4']",
+        "COMPRESSED_SIZE": null
     }
 ]

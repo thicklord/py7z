@@ -193,13 +193,6 @@ def master_blaster(some_path, args):
 	tl = None
 	
 	while True:
-		
-		# breaker = walker(new_root, args, master_archives_set)
-		
-		# # //db&t
-		# print(args.ext)
-		# quit()
-		# # //db&t
 
 		breaker = find_all_7z(new_root, args, master_archives_set)
 		
