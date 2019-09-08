@@ -1,12 +1,9 @@
-import os
 import re
 from os import listdir as ld
-from os import makedirs
-from os import path
 from os.path import isdir as pid
-from os.path import join as oj
-from colorama import Fore, Back, Style
+
 from send2trash import send2trash
+
 from tools.functions import *
 from tools.info import *
 
@@ -38,13 +35,13 @@ def compressor(compression_path, compression_level, zargs=None):
 		return ''
 
 
-def recursor(r_path, lv):
-	if not pid(r_path):
+def recursor(recursive_path, level):
+	if not pid(recursive_path):
 		return
 	
 	directory_list = []
 	
-	for root, drz, flz in os.walk(r_path, topdown=True):
+	for root, drz, flz in os.walk(recursive_path, topdown=True):
 		
 		for d in drz:
 			directory_list.append(oj(root, d))
@@ -53,43 +50,44 @@ def recursor(r_path, lv):
 	directory_list = reversed(directory_list)
 	
 	for dr in directory_list:
-		compressor(dr, lv)
+		compressor(dr, level)
 		send2trash(dr)
 
 
-def squeezer(s_path, level, mode, argz):
+def squeezer(sent_path, level, mode, argz):
 	
 	if argz.remove:
+		# noinspection PyUnusedLocal
 		removal_list = set()
 	
-	if str(s_path).endswith('/'):
-		s_path = str(s_path)[:-1]
+	if str(sent_path).endswith('/'):
+		sent_path = str(sent_path)[:-1]
 	
 	# functionality for sub-directories
 	if mode == 'S':
-		for d in ld(s_path):
+		for d in ld(sent_path):
 			
-			sub_path = oj(s_path, d)
+			sent_path = oj(sent_path, d)
 			
 			# only compress directories
-			if pid(sub_path):
-				compressor(sub_path, level)
+			if pid(sent_path):
+				compressor(sent_path, level)
 			
 			# remove if the '-r' flag is passed
 			if argz.remove:
-				send2trash(sub_path)
+				send2trash(sent_path)
 	
 	elif mode == 'R':
-		recursor(s_path, level)
-		compressor(s_path, level)
+		recursor(sent_path, level)
+		compressor(sent_path, level)
 		
 		if argz.remove:
-			send2trash(s_path)
+			send2trash(sent_path)
 	
 	elif mode == 'P':
-		compressor(s_path, level)
+		compressor(sent_path, level)
 		if argz.remove:
-			send2trash(s_path)
+			send2trash(sent_path)
 
 
 

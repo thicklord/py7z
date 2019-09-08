@@ -1,37 +1,10 @@
 import os
-import re
-import sys
-import requests
-import pandas as pd
-import time
-import shutil
-from bs4 import BeautifulSoup
-from selenium import webdriver
-from datetime import date
-from selenium.common.exceptions import NoSuchElementException
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support.ui import Select
-from selenium.webdriver.support.ui import WebDriverWait
-import selenium.webdriver.support.ui as ui
-import selenium.webdriver.support.expected_conditions as EC
-from selenium.webdriver.common.by import By
-from termcolor import colored, cprint
 # all termcolor attributes: ["bold","dark","underline","blink","reverse","concealed"]
 # text colors: [grey, red, green, yellow, blue, magenta, cyan, white]
 # highlight colors: [on_grey, on_red, on_green, on_yellow, on_blue, on_magenta, on_cyan, on_white]
-# 
+#
 from os.path import join as oj
-from os import getcwd as og
-from os import listdir as ld
-from os.path import isdir as pid
-from os.path import isfile as piff
-from os.path import abspath as pabs
-import urllib.request
-from os import path
-from os import makedirs
-from walkdir import filtered_walk as wdfw
-from walkdir import all_paths as wdap
-from walkdir import limit_depth as wdld
+
 from colorama import Fore, Style, Back
 
 

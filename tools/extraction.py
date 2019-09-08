@@ -21,9 +21,9 @@ def ext_7z(archive_path):
 	pass
 
 
-def remove_all(pt):
+def remove_all(given_path):
 	
-	for root, drz, flz in os.walk(pt, topdown=True):
+	for root, drz, flz in os.walk(given_path, topdown=True):
 		
 		for fl in flz:
 			if fl.startswith("."):
@@ -48,7 +48,7 @@ def remove_all(pt):
 	pass
 
 
-def find_all_7z(path_obj, args, archive_list):
+def find_7zs(path_obj, args, archive_list):
 	arc_count = 0
 	
 	archive_types = ['7z']
@@ -100,12 +100,7 @@ def find_all_7z(path_obj, args, archive_list):
 		return a_list
 
 
-def walker(p, argset, mas):
-	
-	# if not pid(p):
-	# 	eprint("'%s' is not a directory.." % p)
-	# 	gprint("..quitting.")
-	# 	quit()
+def walker(walk_path, argset, mas):
 	
 	arc_count = 0
 	
@@ -125,7 +120,7 @@ def walker(p, argset, mas):
 		else:
 			archive_types.append(argset.ext)
 	
-	for root, drz, flz in os.walk(p, topdown=True):
+	for root, drz, flz in os.walk(walk_path, topdown=True):
 		
 		for fl in flz:
 			
@@ -175,8 +170,6 @@ def master_blaster(some_path, args):
 	
 	new_root = None
 	
-	# master_archives_set = set()
-	
 	if piff(some_path):
 		
 		ext_7z(some_path)
@@ -193,8 +186,7 @@ def master_blaster(some_path, args):
 	tl = None
 	
 	while True:
-
-		breaker = find_all_7z(new_root, args, master_archives_set)
+		breaker = find_7zs(new_root, args, master_archives_set)
 		
 		if breaker:
 			break

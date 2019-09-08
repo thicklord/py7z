@@ -184,8 +184,6 @@ class InfoGather:
 	
 	def logger_pd(self):
 		
-		# log_frame = pd.DataFrame(columns=list(self.to_dict().keys()), data=self.to_dict().values())
-		
 		# noinspection PyUnusedLocal
 		log_frame = pd.DataFrame.from_dict(self.to_dict(), orient='index')
 		
@@ -193,11 +191,6 @@ class InfoGather:
 		
 		if piff(log_file_path):
 			pass
-		
-		# print(log_frame.head())
-		
-		pass
-
 
 
 
