@@ -1,5 +1,6 @@
 import sys
 from argparse import ArgumentParser
+import shutil
 from tools.compression import *
 from tools.extraction import *
 from tools.functions import *
@@ -23,24 +24,22 @@ def prse():
 		dest='type',
 	)
 	
-	compression_group = subpz.add_parser('C')
-	extraction_group = subpz.add_parser('X')
+	cparse = subpz.add_parser('C', help="Default parameters for compression: -t7z -m0=lzma -mx=0 -mfb=64 -md=32m -ms=on")
+	xparse = subpz.add_parser('X')
 	
 	# # extraction parser and arguments
 	# flag to delete archives after extracting them
-	extraction_group.add_argument(
+	xparse.add_argument(
 		'-d',
 		'--delete-archives',
 		dest='remove',
-		action='store_true',
-		help='Triggers removal of archives after successful decompression'
+		action='store_true', help='Triggers removal of archives after successful decompression'
 	)
 	# option to include other archive types other than 7z
-	extraction_group.add_argument(
+	xparse.add_argument(
 		'-i',
 		'--include-type',
-		dest='ext',
-		help='Optional argument to include other archive formats'
+		dest='ext', help='Optional argument to include other archive formats'
 	)
 	# # //extraction parser and arguments//
 	
@@ -50,7 +49,7 @@ def prse():
 	
 	# # compression parser and arguments
 	# delete directories after compressed
-	compression_group.add_argument(
+	cparse.add_argument(
 		'-d',
 		'--delete-compressed',
 		dest='remove',
@@ -60,16 +59,19 @@ def prse():
 	)
 	
 	# compresssion level, between 0-9, default=0
-	compression_group.add_argument(
+	cparse.add_argument(
 		'level',
 		# '--compression-level',
 		type=int,
+		# required=False,
 		# action='store_true',
 		default=0,
 		# const=0,
 		# nargs='?',
-		help='Level of compression for all objects to compress (0-9). Default = 0',
 		choices=range(0, 10),
+		metavar="[0-9]",
+		help='Level of compression for all objects to compress. Default = 0',
+		# choices=range(0, 10),
 	)
 	
 	# set compression mode
@@ -93,7 +95,7 @@ def prse():
 	# directories get compressed, the deepest leveled
 	# first, and then it works its way up to the top
 	# most level directory
-	compression_group.add_argument(
+	cparse.add_argument(
 		'-m',
 		'--compression-mode',
 		dest='mode',
@@ -125,10 +127,11 @@ def x_func(argz):
 def main_implementation(args, debug=False):
 	
 	if debug:
-		print(args.remove)
-		
+		print(args)
+		# print(str(args.ext).split(','))
 		quit()
 	
+	# noinspection PyGlobalUndefined
 	global bin_file
 	
 	bin_file = shutil.which("7z")
@@ -174,8 +177,12 @@ def main_implementation(args, debug=False):
 		x_func(args)
 
 
-main_implementation(prse())
-
+try:
+	main_implementation(prse())
+	
+except KeyboardInterrupt:
+	eprint("quitting..")
+	sys.exit()
 
 
 
