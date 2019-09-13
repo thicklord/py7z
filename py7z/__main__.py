@@ -2,9 +2,20 @@ import shutil
 import sys
 
 from argparse import ArgumentParser
-from tools.compression import *
-from tools.extraction import *
-from tools.functions import *
+
+# from py7z import *
+
+# from tools.compression import *
+# from tools.extraction import *
+# from tools.functions import *
+
+
+from py7z.tools.extraction import *
+
+
+
+
+
 
 
 def prse():
@@ -125,7 +136,7 @@ def x_func(argz):
 	pass
 
 
-def main_implementation(args, debug=False):
+def main(args, debug=False):
 	
 	if debug:
 		print(args)
@@ -178,12 +189,18 @@ def main_implementation(args, debug=False):
 		x_func(args)
 
 
-try:
-	main_implementation(prse())
-	
-except KeyboardInterrupt:
-	eprint("quitting..")
-	sys.exit()
+if __name__ == "__main__":
+	main(prse())
+
+# # tried to add escape sequence for exiting running instance of py7z
+# # @2d0: try to implement this in future updates
+#
+# try:
+# 	main(prse())
+#
+# except KeyboardInterrupt:
+# 	eprint("quitting..")
+# 	sys.exit()
 
 
 
