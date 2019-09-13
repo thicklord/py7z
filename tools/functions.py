@@ -5,7 +5,9 @@ import os
 #
 from os.path import join as oj
 
-from colorama import Fore, Style, Back
+from colorama import Back
+from colorama import Fore
+from colorama import Style
 
 
 def dir_mkr(specified_path):

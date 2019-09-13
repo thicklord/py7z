@@ -1,6 +1,7 @@
-import sys
-from argparse import ArgumentParser
 import shutil
+import sys
+
+from argparse import ArgumentParser
 from tools.compression import *
 from tools.extraction import *
 from tools.functions import *

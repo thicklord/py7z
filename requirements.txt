@@ -1,4 +1,3 @@
-stuf
 Send2Trash==1.5.0
 fleep==1.0.1
 colorama==0.4.0

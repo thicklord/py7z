@@ -1,14 +1,9 @@
-import os
-from os import makedirs
-from os import path
 from os.path import isdir as pid
 from os.path import isfile as piff
-from os.path import join as oj
-from colorama import Fore, Back, Style
+
 from send2trash import send2trash
+
 from tools.functions import *
-
-
 
 master_archives_set = set()
 
@@ -55,10 +50,15 @@ def find_7zs(path_obj, args, archive_list):
 	
 	a_list = []
 	
-	included_types = args.ext
+	included_types = str(args.ext).split(',')
 	
 	if included_types:
 		for i, e in enumerate(included_types):
+
+			# //db&t
+			print("type: %s" % str(e))
+			# //db&t
+
 			if str(e).startswith('.'):
 				included_types[i] = e[1:]
 			else:
@@ -68,14 +68,15 @@ def find_7zs(path_obj, args, archive_list):
 	
 	for root, drz, flz in os.walk(path_obj, topdown=True):
 		
+		# noinspection DuplicatedCode,DuplicatedCode
 		for fl in flz:
-			# if fl.startswith("."):
-			# 	continue
+			if fl.startswith("."):
+				continue
 			
-			file_ext = os.path.splitext(fl)[1][1:]
+			file_extension = os.path.splitext(fl)[1][1:]
 			
 			# if fl.endswith(".7z"):
-			if file_ext in archive_types:
+			if file_extension in archive_types:
 				
 				arc_count += 1
 				
@@ -122,6 +123,7 @@ def walker(walk_path, argset, mas):
 	
 	for root, drz, flz in os.walk(walk_path, topdown=True):
 		
+		# noinspection DuplicatedCode,DuplicatedCode
 		for fl in flz:
 			
 			fext = os.path.splitext(fl)[1][1:]
