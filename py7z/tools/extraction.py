@@ -3,7 +3,7 @@ from os.path import isfile as piff
 
 from send2trash import send2trash
 
-from tools.functions import *
+from py7z.tools.functions import *
 
 master_archives_set = set()
 

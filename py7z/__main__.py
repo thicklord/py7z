@@ -3,7 +3,9 @@ import sys
 
 from argparse import ArgumentParser
 
-# from py7z import *
+from py7z.tools.extraction import *
+from py7z.tools.extraction import *
+from py7z.tools.functions import *
 
 # from tools.compression import *
 # from tools.extraction import *

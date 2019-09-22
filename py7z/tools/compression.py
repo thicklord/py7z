@@ -4,8 +4,8 @@ from os.path import isdir as pid
 
 from send2trash import send2trash
 
-from tools.functions import *
-from tools.info import *
+from py7z.tools.functions import *
+from py7z.tools.info import *
 
 
 def compressor(compression_path, compression_level, zargs=None):
