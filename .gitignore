@@ -109,6 +109,7 @@ help-messages
 
 # archives
 *.zip
+click_py7z.zip
 
 # other
 .DS_Store
