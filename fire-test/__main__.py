@@ -1,10 +1,11 @@
 import shutil
 import sys
+import fire
 
 from argparse import ArgumentParser
 
 from py7z.tools.extraction import *
-from py7z.tools.extraction import *
+from py7z.tools.compression import *
 from py7z.tools.functions import *
 
 # from tools.compression import *
@@ -13,6 +14,7 @@ from py7z.tools.functions import *
 
 
 from py7z.tools.extraction import *
+from py7z.tools.info import *
 
 
 
@@ -192,7 +194,11 @@ def main(args, debug=False):
 
 
 if __name__ == "__main__":
-	main(prse())
+	# main(prse())
+	
+	fire.Fire(main)
+	
+	pass
 
 # # tried to add escape sequence for exiting running instance of py7z
 # # @2d0: try to implement this in future updates
