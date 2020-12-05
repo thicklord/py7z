@@ -1,0 +1,190 @@
+# lv_match = re.compile(r"\d")
+#
+# p = None
+#
+# press_me = sys.argv[1]
+#
+# if not str(press_me).endswith("/"):
+# 	press_me += "/"
+#
+# level = sys.argv[2]
+#
+# other_flags = None
+#
+# argument_list = sys.argv[1:]
+#
+# ignore_pre_existing = True
+#
+# if not os.path.exists(press_me):
+# 	print(Fore.LIGHTRED_EX, "object '%s' doesn't exist.. \nexiting..\n" % press_me)
+# 	print(Fore.RESET)
+# 	quit()
+#
+# if not lv_match.match(str(level)):
+# 	print(Fore.LIGHTRED_EX, "missing level operator")
+# 	print(Fore.LIGHTRED_EX, "exiting..")
+# 	print(Fore.RESET)
+# 	quit()
+#
+#
+# try:
+# 	press_me = argument_list[0]
+#
+# 	level = int(argument_list[1])
+#
+# 	other_flags = str(argument_list[2])
+#
+# 	print(Fore.LIGHTGREEN_EX, "\n#\n#\ncompressing %s at level %d with flags %s\n#\n#" % (press_me, level, other_flags))
+# 	print(Fore.RESET)
+#
+#
+# except Exception:
+#
+# 	press_me = argument_list[0]
+#
+# 	level = int(argument_list[1])
+#
+# 	print(Fore.LIGHTRED_EX, "no encryption. compressing %s at level %d" % (press_me, level))
+# 	print(Fore.LIGHTRED_EX, "to encrypt, run again and pass 'enc' as a third argument")
+# 	print(Fore.RESET)
+#
+# if 'E' in other_flags:
+# 	p = 'enc'
+
+
+# auto_do = sys.argv[3]
+
+# ————————————————————————————————————————
+
+# if 'D' in other_flags:
+#
+# 	recursor(press_me, level)
+#
+# 	acquire_dirs(press_me)
+#
+# 	compressor(press_me, level)
+# 	del_list.append(press_me)
+#
+# 	if input("Remove Source Files ?\n").lower() == 'y':
+#
+# 		# parent
+# 		try:
+# 			# os.remove(press_me)
+# 			for successful in del_list:
+# 				send2trash(successful)
+# 				print(Fore.LIGHTRED_EX, "removed %s" % successful)
+# 			print(Fore.LIGHTRED_EX, "Source Removed.")
+# 		except Exception as e:
+# 			print(e)
+# 			print(Fore.LIGHTRED_EX, "Couldn't Remove Source")
+# 		finally:
+# 			print(Fore.RESET)
+# 	else:
+# 		print(Fore.LIGHTRED_EX, "Source Preserved.")
+# 		print(Fore.RESET)
+#
+#
+# else:
+#
+# 	if 'S' in other_flags:
+#
+# 		sub_del_list = []
+#
+# 		for k in os.listdir(press_me):
+#
+# 			if k.startswith('.'):
+# 				continue
+#
+# 			if not ignore_pre_existing:
+# 				if k.endswith('.7z'):
+# 					print(Fore.GREEN, "'%s' is already a 7z archive.." % k)
+#
+# 					if input("continue ?\n") == 'y':
+#
+# 						sub_press = press_me+'/'+k
+#
+# 						sub_compressor(press_me, sub_press, level)
+#
+# 						sub_del_list.append(sub_press)
+#
+# 					else:
+# 						print("skipping '%s'\n" % k)
+# 						continue
+#
+# 			print(Fore.RESET)
+#
+# 			sub_press = press_me + '/' + k
+#
+# 			sub_compressor(press_me, sub_press, level)
+#
+# 			sub_del_list.append(sub_press)
+#
+#
+# 		if 'R' in other_flags:
+# 			try:
+# 				for sd in sub_del_list:
+# 					if os.path.exists(sd):
+# 						send2trash(sd)
+# 						print(Fore.LIGHTGREEN_EX, "removed %s" % sd)
+#
+# 					else:
+# 						print(Fore.LIGHTRED_EX, "path '%s' doesn't exist" % sd)
+#
+# 					print(Fore.RESET)
+#
+# 			except Exception as e:
+# 				print(Fore.LIGHTRED_EX, e)
+#
+# 			finally:
+# 				print(Fore.RESET)
+#
+# 		elif 'R' not in other_flags:
+# 			# if input(Fore.LIGHTCYAN_EX, "remove children ?\n").lower() == 'y':
+# 			#     print(Fore.RESET)
+# 			if input("remove children ?\n").lower() == 'y':
+#
+# 				# sub-folders in parent
+#
+# 				try:
+# 					for sd in sub_del_list:
+# 						if os.path.exists(sd):
+# 							send2trash(sd)
+# 							print(Fore.LIGHTGREEN_EX, "removed %s" % sd)
+#
+# 						else:
+# 							print(Fore.LIGHTRED_EX, "path '%s' doesn't exist" % sd)
+#
+# 						print(Fore.RESET)
+#
+# 				except Exception as e:
+# 					print(Fore.LIGHTRED_EX, e)
+#
+# 				finally:
+# 					print(Fore.RESET)
+#
+# 		else:
+# 			print(Fore.MAGENTA, 'children preserved')
+# 			print(Fore.RESET)
+#
+# 	if 'P' in other_flags:
+# 		compressor(press_me, level)
+# 		del_list.append(press_me)
+#
+#
+# 		if input("Remove Source Files ?\n").lower() == 'y':
+#
+# 			# parent
+# 			try:
+# 				# os.remove(press_me)
+# 				for successful in del_list:
+# 					send2trash(successful)
+# 					print(Fore.LIGHTRED_EX, "removed %s" % successful)
+# 				print(Fore.LIGHTRED_EX, "Source Removed.")
+# 			except Exception as e:
+# 				print(e)
+# 				print(Fore.LIGHTRED_EX, "Couldn't Remove Source")
+# 			finally:
+# 				print(Fore.RESET)
+# 		else:
+# 			print(Fore.LIGHTRED_EX, "Source Preserved.")
+# 			print(Fore.RESET)

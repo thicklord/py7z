@@ -1,0 +1,133 @@
+def r_func(argz):
+
+	removal_list = []
+
+	recursor(argz.path, argz.level)
+	acquire_dirs(argz.path)
+
+	compressor(argz.path, argz.level)
+
+	removal_list.append(argz.path)
+
+	if argz.remove:
+
+		for obj in removal_list:
+			try:
+				send2trash(obj)
+
+				print("removed '%s'" % obj)
+
+			except Exception as e:
+				print("couldn't remove '%s'" % obj)
+				print("exception caught: %s" % str(e))
+				continue
+
+
+def s_func(argz):
+
+	sub_removals = []
+
+	for k in ld(argz.path):
+
+		if k.startswith('.'):
+			continue
+		if k.endswith(".7z"):
+			continue
+
+		if pid(k):
+			sub_obj = oj(argz.path, k)
+
+			sub_compressor(argz.path, sub_obj, argz.level)
+
+			sub_removals.append(sub_obj)
+
+	if argz.remove:
+
+		for obj in sub_removals:
+			try:
+				send2trash(obj)
+
+				print("removed '%s'" % obj)
+
+			except Exception as e:
+				print("couldn't remove '%s'" % obj)
+				print("exception caught: %s" % str(e))
+				continue
+
+
+def p_func(argz):
+
+	compressor(argz.path, argz.level)
+
+	obj = argz.path
+
+	if argz.remove:
+		try:
+			send2trash(obj)
+
+			print("removed '%s'" % obj)
+
+		except Exception as e:
+			print("couldn't remove '%s'" % obj)
+			print("exception caught: %s" % str(e))
+
+
+----------------------------------------------------------
+
+if argz.mode == 'R':
+	r_func(argz)
+
+elif argz.mode == 'P':
+	p_func(argz)
+
+elif argz.mode == 'S':
+	s_func(argz)
+
+
+----------------------------------------------------------
+
+	
+cparse.add_argument(
+	'-P',
+	'--parent-mode',
+	dest='mode',
+	default='-P',
+	help="Compress root argument only"
+)
+
+cparse.add_argument(
+	'-R',
+	'--recursive-mode',
+	dest='mode',
+	default='-P',
+	help="Compress all directory arguments recursively"
+)
+
+cparse.add_argument(
+	'-S',
+	'--sub-mode',
+	dest='mode',
+	default='-P',
+	help="Compress first level sub-directories"
+)
+
+
+----------------------------------------------------------
+
+self.destination_path = self.generate_destination()
+
+self.destination_path = original_path[:-1] + ".7z" if str(original_path).endswith('/') else original_path + ".7z"
+
+
+
+----------------------------------------------------------
+
+
+
+
+
+
+
+
+
+

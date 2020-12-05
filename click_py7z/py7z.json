@@ -1,0 +1,116 @@
+[
+    {
+        "INITIAL_SIZE": "31M",
+        "ORIGINAL_PATH": "/Users/chris/Desktop/aptclones",
+        "DESTINATION_PATH": "/Users/chris/Desktop/aptclones.7z",
+        "COMPRESSION_DETAILS": "{'compression_level': 9, 'compression_mode': 'R', 'remove_boolean': False, 'compression': True}",
+        "CONTAINING_FILE_TYPES": [],
+        "COMPRESSED_SIZE": "33M"
+    },
+    {
+        "INITIAL_SIZE": "84M",
+        "ORIGINAL_PATH": "/Users/chris/Desktop/c8",
+        "DESTINATION_PATH": "/Users/chris/Desktop/c8.7z",
+        "COMPRESSION_DETAILS": "{'compression_level': 9, 'compression_mode': 'R', 'remove_boolean': False, 'compression': True}",
+        "CONTAINING_FILE_TYPES": [
+            "gif"
+        ],
+        "COMPRESSED_SIZE": "96M"
+    },
+    {
+        "INITIAL_SIZE": "407M",
+        "ORIGINAL_PATH": "/Users/chris/Desktop/MagicMirror",
+        "DESTINATION_PATH": "/Users/chris/Desktop/MagicMirror.7z",
+        "COMPRESSION_DETAILS": "{'compression_level': 9, 'compression_mode': 'R', 'remove_boolean': False, 'compression': True}",
+        "CONTAINING_FILE_TYPES": "['mov', 'pages', 'numbers', 'gif', 'ico', 'sys', 'voc', 'drv', 'gz', 'woff', 'epub', 'jar', 'xml', 'psd', 'woff2', 'odt', 'otf', 'com', 'ttf', 'key', 'zip', 'png', 'dll', 'exe']",
+        "COMPRESSED_SIZE": "96M"
+    },
+    {
+        "INITIAL_SIZE": "227M",
+        "ORIGINAL_PATH": "/Users/chris/Desktop/MR-BISCUIT",
+        "DESTINATION_PATH": "/Users/chris/Desktop/MR-BISCUIT.7z",
+        "COMPRESSION_DETAILS": "{'compression_level': 9, 'compression_mode': 'R', 'remove_boolean': True, 'compression': True}",
+        "CONTAINING_FILE_TYPES": "['jpg', 'psd', 'png', 'ai', 'pdf']",
+        "COMPRESSED_SIZE": "112M"
+    },
+    {
+        "INITIAL_SIZE": "46M",
+        "ORIGINAL_PATH": "/Users/chris/Desktop/spoty_win",
+        "DESTINATION_PATH": "/Users/chris/Desktop/spoty_win.7z",
+        "COMPRESSION_DETAILS": "{'compression_level': 9, 'compression_mode': 'R', 'remove_boolean': True, 'compression': True}",
+        "CONTAINING_FILE_TYPES": "['com', 'drv', 'exe', 'dll', 'sys']",
+        "COMPRESSED_SIZE": "44M"
+    },
+    {
+        "INITIAL_SIZE": "390M",
+        "ORIGINAL_PATH": "/Users/chris/Desktop/win_wrz",
+        "DESTINATION_PATH": "/Users/chris/Desktop/win_wrz.7z",
+        "COMPRESSION_DETAILS": "{'compression_level': 9, 'compression_mode': 'S', 'remove_boolean': True, 'compression': True}",
+        "CONTAINING_FILE_TYPES": "['7z', 'exe', 'dll', 'sys', 'drv', 'com']",
+        "COMPRESSED_SIZE": null
+    },
+    {
+        "INITIAL_SIZE": "503M",
+        "ORIGINAL_PATH": "/Volumes/Extendo/[User Files]/[SyncThing]/f0rtm0rph_synk/4F/__incoming__/business-card-psd-templates",
+        "DESTINATION_PATH": "/Volumes/Extendo/[User Files]/[SyncThing]/f0rtm0rph_synk/4F/__incoming__/business-card-psd-templates.7z",
+        "COMPRESSION_DETAILS": "{'compression_level': 9, 'compression_mode': 'S', 'remove_boolean': True, 'compression': True}",
+        "CONTAINING_FILE_TYPES": "['jpg', 'docx', 'xlsx', 'pps', 'ppt', 'psd', 'pptx', 'doc', 'xls']",
+        "COMPRESSED_SIZE": null
+    },
+    {
+        "INITIAL_SIZE": "4.1G",
+        "ORIGINAL_PATH": "/Users/chris/Desktop/icloud_data",
+        "DESTINATION_PATH": "/Users/chris/Desktop/icloud_data.7z",
+        "COMPRESSION_DETAILS": "{'compression_level': 9, 'compression_mode': 'R', 'remove_boolean': True, 'compression': True}",
+        "CONTAINING_FILE_TYPES": "['jpg', 'gif', 'mov', '3gp', 'png', '3g2']",
+        "COMPRESSED_SIZE": "4.2G"
+    },
+    {
+        "INITIAL_SIZE": "173M",
+        "ORIGINAL_PATH": "/Users/chris/Desktop/PyCharm-Preferences-Backups",
+        "DESTINATION_PATH": "/Users/chris/Desktop/PyCharm-Preferences-Backups.7z",
+        "COMPRESSION_DETAILS": "{'compression_level': 9, 'compression_mode': 'R', 'remove_boolean': True, 'compression': True}",
+        "CONTAINING_FILE_TYPES": "['pages', 'epub', 'zip', 'numbers', 'jar', 'xml', 'key']",
+        "COMPRESSED_SIZE": "24M"
+    },
+    {
+        "INITIAL_SIZE": "1.2G",
+        "ORIGINAL_PATH": "/Users/chris/Desktop/_thickbatch",
+        "DESTINATION_PATH": "/Users/chris/Desktop/_thickbatch.7z",
+        "COMPRESSION_DETAILS": "{'compression_level': 9, 'compression_mode': 'R', 'remove_boolean': True, 'compression': True}",
+        "CONTAINING_FILE_TYPES": "['pages', 'png', 'xml', 'numbers', 'otf', 'woff', 'ico', 'gz', 'zip', 'jar', 'odt', 'epub', 'woff2', 'sqlite', 'psd', 'ttf', 'gif', 'key', 'jpg']",
+        "COMPRESSED_SIZE": "209M"
+    },
+    {
+        "INITIAL_SIZE": "1.2G",
+        "ORIGINAL_PATH": "/Users/chris/Desktop/_thickbatch",
+        "DESTINATION_PATH": "/Users/chris/Desktop/_thickbatch.7z",
+        "COMPRESSION_DETAILS": "{'compression_level': 9, 'compression_mode': 'S', 'remove_boolean': True, 'compression': True}",
+        "CONTAINING_FILE_TYPES": "['xml', 'gz', 'psd', 'epub', 'woff', 'ico', 'key', 'jar', 'otf', 'zip', 'gif', 'pages', 'odt', 'jpg', 'ttf', 'png', 'sqlite', 'woff2', 'numbers']",
+        "COMPRESSED_SIZE": "209M"
+    },
+    {
+        "INITIAL_SIZE": "152M",
+        "ORIGINAL_PATH": "/Users/chris/Desktop/ubx2_docker/TESTING",
+        "DESTINATION_PATH": "/Users/chris/Desktop/ubx2_docker/TESTING.7z",
+        "COMPRESSION_DETAILS": "{'compression_level': 9, 'compression_mode': 'S', 'remove_boolean': True, 'compression': True}",
+        "CONTAINING_FILE_TYPES": "['png', 'key', 'zip', 'odt', 'epub', 'sqlite', 'gz', 'numbers', 'jar', 'xml', '7z', 'pages']",
+        "COMPRESSED_SIZE": null
+    },
+    {
+        "INITIAL_SIZE": "1.2G",
+        "ORIGINAL_PATH": "/Users/chris/Desktop/ubx2_docker/_thickbatch",
+        "DESTINATION_PATH": "/Users/chris/Desktop/ubx2_docker/_thickbatch.7z",
+        "COMPRESSION_DETAILS": "{'compression_level': 9, 'compression_mode': 'S', 'remove_boolean': True, 'compression': True}",
+        "CONTAINING_FILE_TYPES": "['epub', 'jpg', 'xml', 'pages', 'ico', 'png', 'zip', 'otf', 'sqlite', 'psd', 'gif', 'odt', 'numbers', 'woff', 'key', 'gz', 'jar', 'ttf', 'woff2']",
+        "COMPRESSED_SIZE": null
+    },
+    {
+        "INITIAL_SIZE": "375M",
+        "ORIGINAL_PATH": "/Users/chris/Documents/League of Legends/Highlights",
+        "DESTINATION_PATH": "/Users/chris/Documents/League of Legends/Highlights.7z",
+        "COMPRESSION_DETAILS": "{'compression_level': 9, 'compression_mode': 'R', 'remove_boolean': True, 'compression': True}",
+        "CONTAINING_FILE_TYPES": "['webm', '7z', 'mp4']",
+        "COMPRESSED_SIZE": "385M"
+    }
+]
